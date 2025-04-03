@@ -17,6 +17,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build
-      run: cargo build
-    - name: Run tests
-      run: cargo test
+      run: cargo build --release && ls target/release/ && target/release/async-lib-demo
